@@ -1,6 +1,5 @@
-<html>
-<h1> hixd </h1>
-</html>
+<?php
 
+echo 'Hi there';
 
-2
+?>
