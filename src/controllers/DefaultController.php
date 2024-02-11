@@ -16,6 +16,10 @@ class DefaultController extends AppController {
     }
 
     public function account(){
+        if(empty($_SESSION['user'])) {
+            $this->render('login', ['messages' => ['Zaloguj sie aby kontynuowac']]);
+            exit();
+        }
         $this->render('account');
     }
 

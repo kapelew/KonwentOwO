@@ -51,7 +51,7 @@ form.login{
 }
 
 input, a, button{
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-family: 'ABeeZee', sans-serif;
     font-size: 16px;
     line-height: 28px;
@@ -89,7 +89,7 @@ input[type="submit"], a , button{
 
 .login-container h2{
     color: #464E73;
-    margin-top: 3em;
+    margin-top: 2em;
     text-align: center;
     font-size: 24px;
 }

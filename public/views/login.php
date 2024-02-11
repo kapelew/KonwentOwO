@@ -26,10 +26,10 @@
 
                     <input id="password" name="password" type="password" placeholder="hasło" autocomplete="off">
 
-                <input type="submit" name="submit" value="Zaloguj sie">
+                <button type="submit" name="submit">Zaloguj sie</button>
+
                 <h2>Nie masz konta?</h2>
                 <a href="signUp" class="register-button">Zarejestruj się</a>
-
             </form>
 
         </div>
