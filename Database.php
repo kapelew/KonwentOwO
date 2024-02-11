@@ -1,6 +1,6 @@
 <?php
 
-require_once "config.php";
+require_once __DIR__."/.idea/config.php";
 
 class Database {
     private $username;
