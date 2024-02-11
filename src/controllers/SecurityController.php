@@ -43,7 +43,7 @@ class SecurityController extends AppController {
         ];
 
         $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/homePage");
+        header("Location: {$url}/events");
     }
 
     public function signUp()
@@ -74,9 +74,7 @@ class SecurityController extends AppController {
     public function logout() {
 
         session_destroy();
-
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/login");
+        $this->render('login', ['messages' => ['Pomyslnie wylogowano']]);
     }
 }
 

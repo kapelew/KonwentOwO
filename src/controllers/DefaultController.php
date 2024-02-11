@@ -10,11 +10,6 @@ class DefaultController extends AppController {
 
     }
 
-    public function homePage(){
-        //display homePage.php
-        $this->render('homePage');
-    }
-
     public function account(){
         if(empty($_SESSION['user'])) {
             $this->render('login', ['messages' => ['Zaloguj sie aby kontynuowac']]);
