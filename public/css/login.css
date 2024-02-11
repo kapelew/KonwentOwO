@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+
 body{
     margin: 0;
+
 }
 
 
@@ -7,6 +11,7 @@ body{
     width: 100vw;
     height: 100vh;
     background: #F5F5FD;
+    font-family: 'ABeeZee', sans-serif;
 
     display: flex;
     flex-direction: row;
@@ -16,11 +21,13 @@ body{
 
 .logo {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    /*flex-shrink: 0;*/
-
     /*background: url("../../public/img/logo.svg"), lightgray 50% / cover no-repeat;*/
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+
 }
 
 .login-container{
@@ -34,22 +41,61 @@ body{
 
 
 form.login{
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    height: 40vh;
     margin: 1em;
+
 }
 
-input{
+input, a, button{
     margin-bottom: 10px;
-    height: 15%;
-    border-radius: 12px;
-    border: 1px solid #E4DFDF;
-    background: #FFF;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #FF8C42;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px;
 }
 
-button.login{
-    fill: #FF8C42;
+input[type="submit"], a , button{
+    background-color: #FF8C42;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-container h1{
+    color: #464E73;
+    font-size: 60px;
+}
+
+.login-container h2{
+    color: #464E73;
+    margin-top: 3em;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+a{
+    text-decoration: none;
+    text-align: center;
 }
