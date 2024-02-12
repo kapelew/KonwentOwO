@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="public/css/login.css">
     <script src="https://kit.fontawesome.com/8649a3516d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/signUpValidation.js" defer></script>
     <meta charset="utf-8">
     <title>LOGIN PAGE</title>
 </head>
@@ -21,15 +23,15 @@
                 }
                 ?>
             </div>
-            <input id="email" name="email" type="email" placeholder="adres email" autocomplete="off" required>
+            <input id="email" name="email" type="text" placeholder="adres email" autocomplete="off" required>
             <input id="password" name="password" type="password" placeholder="hasło" autocomplete="off" required>
             <input id="confirmedPassword" name="confirmedPassword" type="password" placeholder="potwierdź hasło" autocomplete="off" required>
             <input id="name" name="name" type="text" placeholder="imię" autocomplete="off" required>
             <input id="surname" name="surname" type="text" placeholder="nazwisko" autocomplete="off" required>
             <input id="phone" name="phone"type="text" placeholder="numer telefonu" autocomplete="off" required>
-            <button type="submit" name="submit">Zarejestruj sie</button>
+            <button id="register-button" name="register-button" class="register-button" type="submit">Zarejestruj sie</button>
             <h2 id="h2SingUp" >Masz konto?</h2>
-            <a href="login" class="register-button">Zaloguj się</a>
+            <a href="login" class="login-button">Zaloguj się</a>
         </form>
     </div>
 

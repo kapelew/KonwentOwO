@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="public/css/login.css";>
     <script src="https://kit.fontawesome.com/8649a3516d.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
@@ -21,12 +22,12 @@
                             }
                         ?>
                     </div>
-                    <input id="email" name="email" type="text" placeholder="adres email" autocomplete="off">
+                    <input id="email" name="email" type="text" placeholder="adres email" autocomplete="off" required>
 
 
-                    <input id="password" name="password" type="password" placeholder="hasło" autocomplete="off">
+                    <input id="password" name="password" type="password" placeholder="hasło" autocomplete="off" required>
 
-                <button type="submit" name="submit">Zaloguj sie</button>
+                <button class="login-button" type="submit" name="submit">Zaloguj sie</button>
 
                 <h2>Nie masz konta?</h2>
                 <a href="signUp" class="register-button">Zarejestruj się</a>

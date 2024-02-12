@@ -30,6 +30,13 @@ class UserRepository extends Repository
         if (isset($user['id'])) {
             $userObject->setId((int)$user['id']);
         }
+        if (isset($user['picture_id'])) {
+            $userObject->setPictureId($user['picture_id']);
+        }
+        if (isset($user['created_at'])) {
+            $userObject->setCreatedAt($user['created_at']);
+        }
+
 
         return $userObject;
     }

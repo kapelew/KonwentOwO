@@ -32,7 +32,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Uzytkownik z takim mailem nie istnieje!']]);
         }
 
-        if ($user->getPassword() !== md5($password)) {
+        if (!password_verify($password,$user->getPassword())) {
             return $this->render('login', ['messages' => ['Wprowadz poprawne haslo!']]);
         }
 
@@ -40,6 +40,8 @@ class SecurityController extends AppController {
             'id' => $user->getId(),
             'email' => $user->getEmail(),
             'name' => $user->getName(),
+            'pictureId' => $user->getPictureId(),
+            'created_at' => $user->getCreatedAt()
         ];
 
         $url = "http://$_SERVER[HTTP_HOST]";
@@ -54,16 +56,16 @@ class SecurityController extends AppController {
 
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $confirmedPassword = $_POST['confirmedPassword'];
         $name = $_POST['name'];
         $surname = $_POST['surname'];
         $phone = $_POST['phone'];
 
-        if ($password !== $confirmedPassword) {
-            return $this->render('signUp', ['messages' => ['Wprowadz poprawne haslo']]);
+        if($this->userRepository->getUser($email)) {
+            return $this->render('signup', ['messages' => ['Podany email jest juz uzywany!']]);
         }
 
-        $user = new User($email, md5($password), $name, $surname);
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+        $user = new User($email, $hashedPassword, $name, $surname);
         $user->setPhone($phone);
 
         $this->userRepository->addUser($user);

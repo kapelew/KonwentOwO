@@ -2,8 +2,9 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="public/css/homepage.css";>
-    <link rel="stylesheet" type="text/css" href="public/css/events.css";>
+    <link rel="stylesheet" type="text/css" href="public/css/account.css";>
     <script src="https://kit.fontawesome.com/8649a3516d.js" crossorigin="anonymous"></script>
     <title>HOME PAGE</title>
 </head>
@@ -22,9 +23,21 @@
     </nav>
 
     <main>
+        <div class="container">
+            <div class="profilePic">
+                <?php
+                $pictureId = $_SESSION['user']['pictureId'];
+                echo "<img class='profileImg' src='public/img/{$pictureId}.png' alt='Profile Picture'>";
+                ?>
+            </div>
 
+            <div class="userInfo">
+                <p><?php echo "Dolaczyles do nas ".$_SESSION['user']['created_at'].", dziekujemy za ten czas!"; ?></p>
+            </div>
 
-
+            <div class="uploadNewPic"></div>
+                <p>Zmien swoje zdjecie profilowe</p>
+        </div>
     </main>
 
 </div>

@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
-
-
 body{
     margin: 0;
     font-family: 'ABeeZee', sans-serif;
 }
 
 main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     background: #F5F5FD;
+    width: 80vw;
 }
 
 a:hover{
     color: lightgray;
 }
-
 
 
 a {
@@ -41,10 +42,6 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-main{
-    width: 80vw;
 }
 
 nav > img{
@@ -85,11 +82,7 @@ li:last-child{
     width: 100%;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
+
 
 header{
     display: flex;
@@ -120,4 +113,5 @@ header{
 .searchBar input:focus {
     outline: none;
 }
+
 
