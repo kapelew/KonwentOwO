@@ -8,9 +8,9 @@ KonwentOwO  ma na celu ułatwienie użytkownikom wyszukiwania konwentów z głó
 ## Działanie
 
 - Logowanie / Rejestracja
-<img width="50%" alt="loginPage" src="https://github.com/kapelew/KonwentOwO/assets/75472639/f61de646-87c1-4676-a9f1-7db4d08c1bdd">
+<img width="100%" alt="loginPage" src="https://github.com/kapelew/KonwentOwO/assets/75472639/f61de646-87c1-4676-a9f1-7db4d08c1bdd">
 
-<img width="50%" alt="signUpPage" src="https://github.com/kapelew/KonwentOwO/assets/75472639/097d2fb5-77a3-4572-a25a-2dae734fa75b">
+<img width="100%" alt="signUpPage" src="https://github.com/kapelew/KonwentOwO/assets/75472639/097d2fb5-77a3-4572-a25a-2dae734fa75b">
 
 - Strona glowa z polecanymi wydarzeniami
 <img width="100%" alt="mainPage" src="https://github.com/kapelew/KonwentOwO/assets/75472639/52714eef-57b8-4e89-9908-57c597ae6eb9">
