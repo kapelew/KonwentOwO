@@ -12,32 +12,43 @@ section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
-    padding: 2em;
+    padding: 0em 1em;
     overflow: auto;
-
 }
 
 .events>div>img{
-    height: 50%;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
-
 }
 
 .events>div>div{
-    height: 50%;
-
+    margin: 0.5em;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .events>div{
-    border-radius: 18px;
-    background: #FFF;
-    box-shadow: 0px 8px 30px 0px rgba(80, 85, 136, 0.06);
-    padding: 15px;
-
+    border: 1px solid gray;
+    border-radius: 1em 1em 0 0;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
 
+p{
+    font-size: 0.9em;
+}
+
+
+.events > a img{
+    width: 100%;
+}
+
+.events a{
+    border: black solid 1px;
+    padding: 1em;
 }

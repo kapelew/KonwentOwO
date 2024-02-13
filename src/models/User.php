@@ -10,6 +10,7 @@ class User
     private $pictureId;
     private $createdAt;
     private $id;
+    private $role;
 
     public function __construct(
         string $email,
@@ -109,4 +110,13 @@ class User
         $this->createdAt = $createdAt;
     }
 
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    public function setRole($role): void
+    {
+        $this->role = $role;
+    }
 }

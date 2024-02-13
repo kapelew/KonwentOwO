@@ -22,14 +22,18 @@ class DefaultController extends AppController {
         $this->render('signUp');
     }
 
-    public function search(){
-        $this->render('search');
-    }
-    public function bookmarks(){
-        $this->render('bookmarks');
+    public function searchEngine(){
+        $this->render('searchEngine');
     }
 
-    public function calendar(){
-        $this->render('calendar');
+
+    public function addEvent()
+    {
+        if ($_SESSION['user']['role'] !== 'admin') {
+            header("Location: /home");
+            exit();
+        }
+        $this->render("addEvent");
     }
+
 }

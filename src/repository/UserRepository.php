@@ -36,6 +36,9 @@ class UserRepository extends Repository
         if (isset($user['created_at'])) {
             $userObject->setCreatedAt($user['created_at']);
         }
+        if (isset($user['role'])){
+            $userObject->setRole($user['role']);
+        }
 
 
         return $userObject;

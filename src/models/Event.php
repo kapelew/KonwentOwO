@@ -2,6 +2,7 @@
 
 class Event
 {
+    private $eventId;
     private $title;
     private $description;
     private $date;
@@ -10,11 +11,15 @@ class Event
     private $category;
 
 
-    public function __construct($title, $description, $pictureId)
+    public function __construct($eventId, $title, $description, $pictureId, $date, $city, $category)
     {
+        $this->eventId = $eventId;
         $this->title = $title;
         $this->description = $description;
         $this->pictureId = $pictureId;
+        $this->date = $date;
+        $this->city = $city;
+        $this->category = $category;
     }
 
 
@@ -89,6 +94,13 @@ class Event
         $this->category = $category;
     }
 
+    public function getEventId()
+    {
+        return $this->eventId;
+    }
 
-
+    public function setEventId($eventId): void
+    {
+        $this->eventId = $eventId;
+    }
 }

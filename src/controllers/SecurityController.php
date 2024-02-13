@@ -41,7 +41,8 @@ class SecurityController extends AppController {
             'email' => $user->getEmail(),
             'name' => $user->getName(),
             'pictureId' => $user->getPictureId(),
-            'created_at' => $user->getCreatedAt()
+            'created_at' => $user->getCreatedAt(),
+            'role' => $user->getRole()
         ];
 
         $url = "http://$_SERVER[HTTP_HOST]";

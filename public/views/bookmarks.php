@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="public/css/homepage.css";>
-    <link rel="stylesheet" type="text/css" href="public/css/events.css";>
+    <link rel="stylesheet" type="text/css" href="public/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="public/css/events.css">
     <script src="https://kit.fontawesome.com/8649a3516d.js" crossorigin="anonymous"></script>
-    <title>HOME PAGE</title>
+    <title>Zapisane</title>
 </head>
 <body>
 <div class="baseContainer">
     <nav>
         <img src="public/img/logo.svg">
         <ul>
+            <li><a href="events" class="button" style="color: black"> <i class="fa-solid fa-house"></i> Strona główna</a></li>
+            <li><a href="searchEngine" class="button"> <i class="fa-solid fa-magnifying-glass"></i> Wyszukiwanie</a></li>
             <li><a href="account" class="button"> <i class="fa-solid fa-user"></i> Mój profil</a></li>
-            <li><a href="bookmarks" class="button" style="color: black;"> <i class="fa-solid fa-bookmark"></i> Zapisane</a></li>
-            <li><a href="calendar" class="button"> <i class="fa-solid fa-calendar-days"></i> Terminarz</a></li>
-            <li><a href="search" class="button"> <i class="fa-solid fa-magnifying-glass"></i> Wyszukiwanie</a></li>
+            <li><a href="bookmarks" class="button"> <i class="fa-solid fa-bookmark"></i> Zapisane</a></li>
+            <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin') : ?>
+                <li class="button"><a href="addEvent"><i class="fa-solid fa-plus"></i> Dodaj wydarzenie</a></li>
+            <?php endif; ?>
             <li><a href="/logout" class="button"> <i class="fa-solid fa-right-from-bracket"></i> Wyloguj się</a></li>
         </ul>
-
     </nav>
 
     <main>
         <header>
-            <div class="searchBar">
-                <input placeholder="Wyszkukiwanie">
+            <div class="welcomeMessage" style="font-size: 1em">
+                <h2 style="font-weight: normal"><?php echo "Cześć ".$_SESSION['user']['name'].", oto Twoje zapisane wydarzenia:"; ?></h2>
             </div>
-
         </header>
-
         <section class="events">
-            <div id="project1">
-                <div>
-                    <h2>Tytul</h2>
-                    <p>opis</p>
-                    <div class="socialSection">
-                        <i class="fas fa-heart">600</i>
-                        <i class="fas fa-minus-square">101</i>
-                    </div>
-                </div>
-            </div>
+            <?php if (!empty($bookmarks)) : ?>
+                <?php foreach ($bookmarks as $event) : ?>
+                    <a href="event?id=<?= $event->getEventId(); ?>">
+                        <div class="event" id="event-<?= $event->getTitle(); ?>">
+                            <div>
+                                <h2 style="font-weight: normal"><?= $event->getTitle(); ?></h2>
+                                <p><?= $event->getDescription(); ?></p>
+                            </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <p>Brak zapisanych wydarzeń.</p>
+            <?php endif; ?>
         </section>
-
     </main>
-
 </div>
 </body>
 </html>
