@@ -12,6 +12,10 @@ main{
     width: 80vw;
 }
 
+body h1,h2{
+    font-weight: normal;
+}
+
 nav a:hover{
     color: lightgray;
 }
@@ -125,6 +129,21 @@ header{
 
 .event-details{
     padding: 1em;
+}
+
+form .button{
+
+    margin-top: 1em;
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    border: black solid 1px;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
 }
 
 

@@ -13,10 +13,10 @@
     <nav>
         <img src="public/img/logo.svg">
         <ul>
-            <li><a href="events" class="button" style="color: black"> <i class="fa-solid fa-house"></i> Strona główna</a></li>
+            <li><a href="events" class="button"> <i class="fa-solid fa-house"></i> Strona główna</a></li>
             <li><a href="searchEngine" class="button"> <i class="fa-solid fa-magnifying-glass"></i> Wyszukiwanie</a></li>
             <li><a href="account" class="button"> <i class="fa-solid fa-user"></i> Mój profil</a></li>
-            <li><a href="bookmarks" class="button"> <i class="fa-solid fa-bookmark"></i> Zapisane</a></li>
+            <li><a href="bookmarks" class="button"style="color: black" > <i class="fa-solid fa-bookmark"></i> Zapisane</a></li>
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin') : ?>
                 <li class="button"><a href="addEvent"><i class="fa-solid fa-plus"></i> Dodaj wydarzenie</a></li>
             <?php endif; ?>
