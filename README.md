@@ -12,7 +12,7 @@ KonwentOwO  ma na celu ułatwienie użytkownikom wyszukiwania konwentów z głó
 
 <img width="100%" alt="signUpPage" src="https://github.com/kapelew/KonwentOwO/assets/75472639/097d2fb5-77a3-4572-a25a-2dae734fa75b">
 
-- Strona glowa z polecanymi wydarzeniami
+- Strona glowa z polecanymi wydarzeniami (napis EVENT - placeholder dla zdjecia eventu)
 <img width="100%" alt="mainPage" src="https://github.com/kapelew/KonwentOwO/assets/75472639/52714eef-57b8-4e89-9908-57c597ae6eb9">
 
 - Dzialajacy pasek wyszukiwania live
